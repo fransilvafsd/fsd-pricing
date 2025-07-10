@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FSD Pricing</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icon-192.png">
+  <meta name="theme-color" content="#5A72D8">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #5A72D8, #8A5AD8);
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 { font-size: 2.5em; margin-bottom: 0.2em; }
+    p { font-size: 1.2em; margin-top: 0; }
+    a {
+      background: white;
+      color: #5A72D8;
+      padding: 12px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-top: 20px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>FSD Pricing</h1>
+  <p>Calculadora de Orçamentos Criativos</p>
+  <a href="#">Em breve na Play Store</a>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
