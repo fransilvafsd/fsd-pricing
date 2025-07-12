@@ -1,0 +1,49 @@
+.app {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 1em;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: #fafafa;
+  border-radius: 1em;
+  box-shadow: 0 2px 8px rgba(60,60,60,0.13);
+}
+.input-row {
+  display: flex;
+  gap: 0.5em;
+  margin-bottom: 1em;
+}
+input {
+  flex: 1;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: 1px solid #ccc;
+}
+button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+  background: #e3f2fd;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+@media (max-width: 500px) {
+  .app {
+    max-width: 98vw;
+    padding: .5em;
+  }
+  h1, h2 {
+    font-size: 1.2em;
+  }
+}
