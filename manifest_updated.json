@@ -1,0 +1,68 @@
+{
+  "name": "FSD Pricing",
+  "short_name": "FSD Pricing",
+  "description": "Calculadora de pre\u00e7os profissional para servi\u00e7os criativos.",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "theme_color": "#3f51b5",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "iarc_rating_id": "e30cfce6-3f21-4e95-8cc1-iarc-pwa-0001",
+  "related_applications": [
+    {
+      "platform": "play",
+      "id": "com.fransilva.fsdpricing",
+      "url": "https://play.google.com/store/apps/details?id=com.fransilva.fsdpricing"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Nova Cota\u00e7\u00e3o",
+      "short_name": "Cota\u00e7\u00e3o",
+      "url": "/#nova",
+      "icons": [
+        {
+          "src": "/icons/shortcut-new.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "Identidade Visual",
+      "short_name": "ID Visual",
+      "url": "/#identidade",
+      "icons": [
+        {
+          "src": "/icons/shortcut-id.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+fsd",
+      "url": "/?q=%s"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "edge_side_panel": {
+    "preferred_width": 480
+  }
+}
