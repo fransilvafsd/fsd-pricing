@@ -3,80 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FSD Pricing</title>
+  <title>FSD Pricing Pro</title>
   <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#5A72D8" />
-  <link rel="icon" href="icon-192.png" />
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      background: linear-gradient(135deg, #5A72D8, #8A5AD8);
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100vh;
-    }
-    h1 { font-size: 2.5em; margin-bottom: 0.2em; }
-    p { font-size: 1.2em; margin-top: 0; }
-    a {
-      background: white;
-      color: #5A72D8;
-      padding: 12px 24px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      margin-top: 20px;
-      display: inline-block;
-    }
-    #installBtn {
-      display: none;
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      padding: 12px 20px;
-      background: white;
-      color: #5A72D8;
-      font-weight: bold;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      z-index: 9999;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
 </head>
 <body>
-  <h1>FSD Pricing</h1>
-  <p>Calculadora de Orçamentos Criativos</p>
-  <a href="#">Em breve na Play Store</a>
-  <button id="installBtn">📲 Instalar App</button>
+  <header>
+    <h1>FSD Pricing Pro</h1>
+  </header>
+  <main>
+    <section id="orcamento">
+      <h2>Nova Simulação</h2>
+      <input type="number" placeholder="Horas" id="horas" />
+      <input type="number" placeholder="Valor/hora" id="valor" />
+      <input type="number" placeholder="Adicionais" id="adicionais" />
+      <button onclick="calcular()">Calcular</button>
+      <p id="resultado"></p>
+    </section>
+    <button onclick="exportar()">Exportar Dados</button>
+  </main>
   <script>
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js');
+      navigator.serviceWorker.register('/service-worker.js');
     }
-
-    let deferredPrompt;
-    const installBtn = document.getElementById('installBtn');
-
-    window.addEventListener('beforeinstallprompt', (e) => {
-      e.preventDefault();
-      deferredPrompt = e;
-      installBtn.style.display = 'block';
-    });
-
-    installBtn.addEventListener('click', () => {
-      if (deferredPrompt) {
-        deferredPrompt.prompt();
-        deferredPrompt.userChoice.then((choice) => {
-          if (choice.outcome === 'accepted') {
-            installBtn.style.display = 'none';
-          }
-          deferredPrompt = null;
-        });
-      }
-    });
   </script>
 </body>
 </html>

@@ -1,0 +1,52 @@
+{
+  "name": "FSD Pricing Pro",
+  "short_name": "FSD",
+  "description": "Calculadora de preços inteligente para serviços criativos.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1A1A2E",
+  "theme_color": "#6A1B9A",
+  "orientation": "portrait",
+  "lang": "pt-BR",
+  "id": "/?source=pwa",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "iarc_rating_id": "eC-3",
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=fsd.pricing"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Novo Orçamento",
+      "url": "/#novo",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Histórico",
+      "url": "/#historico"
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+fsd",
+      "url": "/handle?url=%s"
+    }
+  ],
+  "categories": ["productivity", "business", "tools"],
+  "edge_side_panel": {
+    "preferred_width": 320
+  }
+}
