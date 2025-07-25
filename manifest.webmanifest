@@ -1,0 +1,45 @@
+{
+  "name": "FSD Pricing App",
+  "short_name": "FSD Pricing",
+  "description": "Calculadora de preços premium para serviços criativos e freelancers.",
+  "start_url": "/index.html",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0f0f33",
+  "theme_color": "#6f00ff",
+  "orientation": "portrait",
+  "lang": "pt-BR",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "finance"],
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.fsdpremium.app"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Ver Calculadora",
+      "url": "/index.html",
+      "icons": [{ "src": "/icon.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Assinatura Premium",
+      "url": "/premium.html",
+      "icons": [{ "src": "/icon.png", "sizes": "192x192" }]
+    }
+  ],
+  "protocol_handlers": [
+    {
+      "protocol": "web+fsdpremium",
+      "url": "/index.html?ref=%s"
+    }
+  ],
+  "iarc_rating_id": "e30c1c12-2b45-4e33-b7b7-iarc12345678"
+}
