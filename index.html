@@ -1,39 +1,25 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FSD Pricing App</title>
-  <style>
-    body { font-family: sans-serif; margin: 0; padding: 20px; background: #f2f2f2; }
-    .premium-only, .free-only { display: none; margin-top: 20px; padding: 15px; border-radius: 10px; }
-    .premium-only { background: #e0f7fa; color: #006064; }
-    .free-only { background: #fff3e0; color: #e65100; }
-    body.premium .premium-only { display: block; }
-    body.free .free-only { display: block; }
-    .button { display: inline-block; background: #5e60ce; color: #fff; padding: 10px 20px; border-radius: 8px; text-decoration: none; margin-top: 15px; }
-  </style>
+  <title>FSD Pricing</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon-192.png" type="image/png">
 </head>
 <body>
   <h1>Bem-vindo ao FSD Pricing</h1>
-
-  <div class="premium-only">
-    <h2>Modo Premium</h2>
-    <p>Você tem acesso completo às funcionalidades exclusivas.</p>
-  </div>
-
-  <div class="free-only">
-    <h2>Modo Gratuito</h2>
-    <p>Algumas funções estão bloqueadas. Assine para desbloquear!</p>
-    <a class="button" href="premium.html">Assinar agora</a>
-  </div>
+  <p>App responsivo com modo offline e instalação.</p>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const isPremium = localStorage.getItem("fsd_usuario_premium") === "true";
-      document.body.classList.add(isPremium ? "premium" : "free");
-    });
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js')
+        .then(function(registration) {
+          console.log('ServiceWorker registrado com sucesso:', registration.scope);
+        }).catch(function(error) {
+          console.log('Falha ao registrar o ServiceWorker:', error);
+        });
+    }
   </script>
 </body>
 </html>
