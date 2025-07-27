@@ -2,7 +2,7 @@
   "name": "FSD Pricing Pro",
   "short_name": "FSD",
   "description": "Calculadora de preços inteligente para serviços criativos.",
-  "start_url": ".",
+  "start_url": "https://fransilvafsd.github.io/fsd-pricing/",
   "display": "standalone",
   "background_color": "#1A1A2E",
   "theme_color": "#6A1B9A",
