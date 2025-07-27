@@ -1,7 +1,7 @@
 {
   "name": "FSD Pricing",
   "short_name": "FSD",
-  "id": "/fsdreposit/",
+  "id": "/fsdpricing/",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#000000",
