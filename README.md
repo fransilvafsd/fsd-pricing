@@ -1,2 +1,1 @@
-# fsd-pricing
-Repo github 
+// Exemplo de conteúdo para README.md
